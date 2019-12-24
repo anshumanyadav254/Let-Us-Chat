@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.luciferhacker.letuschat">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".LetUsChat"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ChatActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".StartActivity" />
+        <activity
+            android:name=".AllUserActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StatusActivity"
+            android:parentActivityName=".SettingActivity" />
+        <activity
+            android:name=".SettingActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>
